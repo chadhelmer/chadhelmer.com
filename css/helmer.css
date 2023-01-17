@@ -47,7 +47,7 @@ TOC:	1. Declarations
 	--hue-3:                                 45; /* Tertiary color; angle of 0-360 color circle (split complementary of base color; math: --hue-1 - 150) */
 	--hsl-text:        var(--hue-1),  90%,  10%; /* Text/borders */
 	--hsl-shadow:      var(--hue-1),  90%,  10%; /* Shadows */
-	--hsl-link:        var(--hue-1), 100%,  30%; /* Links */
+	--hsl-link:        var(--hue-1), 100%,  25%; /* Links */
 	--hsl-accent:      var(--hue-2),  65%,  50%; /* Accents */
 	--hsl-highlight:   var(--hue-3), 100%,  50%; /* Highlights */
 	--hsl-background:  var(--hue-3),  15%,  85%; /* Backgrounds */
@@ -701,7 +701,7 @@ time {
 	perspective-origin: 100vw 100vmin;
 	perspective: 1px; /* enable parallax */
 	scroll-behavior: inherit;
-	scroll-padding: inherit;
+	scroll-padding: calc( 2 * var(--size-padding) + ( 2 * var(--rlh) ) ); /* approx. to bottom of header */
 	/* -webkit-overflow-scrolling: touch; *//* older iOS */
 }
 

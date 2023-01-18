@@ -838,15 +838,13 @@ time {
 [data-theme] #gradient stop[offset="50%"]  { stop-color: var(--stop-color-50); }
 [data-theme] #gradient stop[offset="100%"] { stop-color: var(--stop-color-100); }
 
-[data-theme] #content,
-[data-theme] #content article {
+[data-theme] #content {
 	pointer-events: none; /* keep #header interactive when possible */
 	position: relative;
 	width: 100%;
 	z-index: 2; /* above #header and #footer */
 }
-[data-theme] #content > *,
-[data-theme] #content article > * {
+[data-theme] #content > * {
 	pointer-events: auto; /* counter #content rule */
 }
 

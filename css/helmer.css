@@ -880,7 +880,13 @@ time {
 	align-items: baseline;
 }
 [data-theme] #contact h2 {
+	color: hsl( var(--hsl-accent) );
 	flex: 0 0 100%;
+	font-size: inherit;
+	font-weight: var(--weight-bold);
+	letter-spacing: 0.125em;
+	text-transform: uppercase;
+/* 	font-feature-settings: "smcp", "c2sc"; */
 }
 [data-theme] #contact ul {
 	display: flex;
@@ -896,13 +902,6 @@ time {
 }
 
 [data-theme] article {
-	border-radius: 0;
-	box-shadow: none;
-	max-width: none;
-	padding: 0;
-}
-[data-theme] article section {
-	/* --hsl-link: var(--hsl-text); *//* links inherit color */
 	background-color: hsl( var(--hsl-background) );
 	border-radius: var(--size-radius);
 	box-shadow:
@@ -915,10 +914,10 @@ time {
 	max-width: var(--size-line, 40em);
 	padding: calc( var(--size-padding, 7.5vw) );
 }
-[data-theme] article section + section {
+[data-theme] article + article {
 	margin-top: var(--size-padding);
 }
-[data-theme] section h2 {
+[data-theme] article > h2 {
 	color: hsl( var(--hsl-accent) );
 	font-size: inherit;
 	font-weight: var(--weight-bold);

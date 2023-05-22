@@ -809,6 +809,7 @@ time {
 		0      0     0 100vh #000; /* continue gradient beyond footer without taking up space; but watch performance */
 	height: 100vmin;
 	left: 0;
+	pointer-events: none;
 	position: absolute;
 	right: 0;
 	z-index: -1;

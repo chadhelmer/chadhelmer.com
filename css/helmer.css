@@ -17,18 +17,18 @@ TOC:	1. Declarations
 :root {
 
 	/* Ratios */
-	--ratio-line:                           1.5; /* Line-height in relation to font size (math: 24 (comfortable line-height in px) / 16 (1rem in px)) */
+	--ratio-line:                           1.6; /* Line-height in relation to font size (math: 24 (comfortable line-height in px) / 16 (1rem in px)) */
 	--ratio-large:                       1.1875; /* Large font size (math: 19 (in px) / 16 (1rem in px)) */
 	--ratio-small:                       0.8125; /* Small font size (math: 13 (in px) / 16 (1rem in px)) */
 
 	/* Browser Units */
-	--lh:                                 1.5em; /* Line-height unit; indents, margins, etc. (use until `lh` supported) (math: --ratio-line * --size-font) */
-	--rlh:                               1.5rem; /* Root line-height unit; basic size for vertical rhythm on page (use until `rlh` supported) (math: --ratio-line * --size-font) */
+	--lh:                                 1.6em; /* Line-height unit; indents, margins, etc. (use until `lh` supported) (math: --ratio-line * --size-font) */
+	--rlh:                               1.6rem; /* Root line-height unit; basic size for vertical rhythm on page (use until `rlh` supported) (math: --ratio-line * --size-font) */
 
 	/* Page and Block Sizes (relative to root/viewport) */
-	--size-border:                     0.125rem; /* Border and separator width; fixed size to make consistent across page */
+	--size-border:                    0.9375rem; /* Border and separator width; fixed size to make consistent across page */
 	--size-font:                           1rem; /* Root font size; 1rem (or 100%) usually equals 16px */
-	--size-padding:                       7.5vw; /* Padding for articles and page sections (math: 24 (--rlh in px) / 320 (mobile width in px) * 100vw) */
+	--size-padding:                         8vw; /* Padding for articles and page sections (math: 24 (--rlh in px) / 320 (mobile width in px) * 100vw) */
 	--size-radius:                     0.375rem; /* Border radius; fixed size to make consistent across page */
 
 	/* Fonts and Inline Sizes (relative to font) */
@@ -38,20 +38,18 @@ TOC:	1. Declarations
 	--weight-normal:                        450; /* Default font weight, expecting variable font */
 	--weight-bold:                          750; /* Bold font weight, expecting variable font */
 	--size-line:                           40em; /* Line measure; max. length of content for readability; also set @media breakpoint where var() isn't valid */
-	--size-gap:                         0.125em; /* Line gap (space between font ascenders/descenders and line-height); pads inline elements */
+	--size-gap:                          0.15em; /* Line gap (space between font ascenders/descenders and line-height); pads inline elements */
 	--size-space:                       0.375em; /* Approx. size of space character for font */
 
 	/* Colors (use in hsl() until lch() or oklch() supported)*/
-	--hue-1:                                195; /* Base color; angle of 0-360 color circle (= greenblueish) */
-	--hue-2:                                345; /* Secondary color; angle of 0-360 color circle (split complementary of base color; math: --hue-1 + 150) */
-	--hue-3:                                 45; /* Tertiary color; angle of 0-360 color circle (split complementary of base color; math: --hue-1 - 150) */
-	--hsl-text:        var(--hue-1),  90%,  10%; /* Text/borders */
+	--hue-1:                                218; /* Base color; angle of 0-360 color circle */
+	--hue-2:                                 43; /* Secondary color */
+	--hsl-text:        var(--hue-1), 100%,  10%; /* Text/borders */
 	--hsl-shadow:      var(--hue-1),  90%,  10%; /* Shadows */
 	--hsl-link:        var(--hue-1), 100%,  25%; /* Links */
-	--hsl-accent:      var(--hue-2),  65%,  45%; /* Accents */
-	--hsl-highlight:   var(--hue-3), 100%,  50%; /* Highlights */
-	--hsl-background:  var(--hue-3),  15%,  90%; /* Backgrounds */
-	--hsl-whitewash:   var(--hue-3),   5%, 100%; /* Code and accent backgrounds */
+	--hsl-accent:      var(--hue-2),  78%,  30%; /* Accents */
+	--hsl-background:  var(--hue-2),  10%,  95%; /* Backgrounds */
+	--hsl-whitewash:   var(--hue-2),   5%, 100%; /* Code and accent backgrounds */
 
 	/* Interactions */
 	--transition-duration:                 50ms;
@@ -72,33 +70,9 @@ TOC:	1. Declarations
 }
 
 /* Presentation Gradient Color Cycle */
-:root[data-theme], /* default */
-:root[data-theme="dawn"] {
-	--stop-color-0:   hsl(  25, 100%, 75% );
-	--stop-color-50:  hsl( 275,  15%, 50% );
-	--stop-color-100: hsl( 195, 100%, 10% );
-}
-:root[data-theme="day"]  {
-	--stop-color-0:   hsl( 200,  65%, 75% );
-	--stop-color-50:  hsl( 190,  25%, 95% );
-	--stop-color-100: hsl( 170, 100%, 20% );
-}
-:root[data-theme="dusk"] {
-	--stop-color-0:   hsl(  25, 100%, 70% );
-	--stop-color-50:  hsl( 230,  33%, 55% );
-	--stop-color-100: hsl(  30,  30%, 10% );
-}
-/*
-:root[data-theme="dusk"] {
-	--stop-color-0:   hsl(  25, 100%, 90% );
-	--stop-color-50:  hsl(  10,  85%, 70% );
-	--stop-color-100: hsl( 335,  30%, 20% );
-}
-*/
-:root[data-theme="dark"] {
-	--stop-color-0:   hsl( 220,  15%, 50% );
-	--stop-color-50:  hsl( 210,  55%, 25% );
-	--stop-color-100: hsl( 170, 100%,  5% );
+:root[data-theme] { /* default */
+	--stop-color-0:   hsl( var(--hue-2),  90%, 65% );
+	--stop-color-100: hsl( var(--hue-1),  55%, 30% );
 }
 
 /* 1.3 Fonts */
@@ -123,7 +97,7 @@ TOC:	1. Declarations
 
 /* 2. Sensible Defaults */
 
-/* Reset. Folly. One must do better than the user-agent stylesheet. */
+/* Reset. Besting the user-agent stylesheet should come with a "don't try this at home" disclaimer. */
 /* Hat tips to Sanitize (https://csstools.github.io/sanitize.css), H5BP (https://html5boilerplate.com), Andy Bell (https://piccalil.li/blog/a-modern-css-reset) */
 /* This section also styles all HTML elements output by rendered Markdown, in alphabetical order, with sensible defaults for custom properties */
 
@@ -141,7 +115,7 @@ TOC:	1. Declarations
 	padding: 0;
 	text-align: left;
 	text-decoration-color: inherit;
-	transition: none calc( 3 * var(--transition-duration, 50ms) ) ease-out;
+	transition: none calc( 5 * var(--transition-duration) ) ease-out;
 }
 ::after,
 ::before {
@@ -174,6 +148,7 @@ TOC:	1. Declarations
 /* abbr[aria-label], */
 abbr[title] {
 	cursor: help;
+	text-decoration-color: hsl( var(--hsl-text), 0.5 );
 	text-decoration-line: underline;
 	text-decoration-style: dotted;
 	text-decoration-thickness: 0.09375rem;
@@ -185,11 +160,11 @@ aside {
 	box-sizing: content-box;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: var(--size-line, 40em);
-	padding: calc( var(--size-padding, 7.5vw) );
+	max-width: var(--size-line);
+	padding: calc( var(--size-padding) );
 }
 article :not([style*="display:none"]) + :not(dd):not(figcaption):not(li):not(hr):not(section) {
-	margin-top: var(--rlh, 1.5rem);
+	margin-top: var(--rlh);
 }
 
 audio,
@@ -198,7 +173,7 @@ iframe,
 img,
 svg,
 video {
-	border-radius: var(--size-radius, 0.25rem);
+	border-radius: var(--size-radius);
 	display: block;
 	height: auto;
 	max-width: 100%;
@@ -211,13 +186,13 @@ audio:not([controls]) {
 
 b,
 strong {
-	font-weight: var(--weight-bold, bolder);
+	font-weight: var(--weight-bold);
 }
 
 blockquote {
 	border-left-width: var(--size-border);
 	border-left-color: hsl( var(--hsl-accent) );
-	padding-left: calc( var(--rlh, 1.5rem) - var(--size-border) );
+	padding-left: calc( var(--rlh) - var(--size-border) );
 }
 
 body {
@@ -235,13 +210,13 @@ button,
 input,
 select,
 textarea {
-	border-radius: var(--size-radius, 0.25rem);
-	border-width: var(--size-border, 0.125rem);
+	border-radius: var(--size-radius);
+	border-width: var(--size-border);
 	height: auto;
-	margin-bottom: calc( var(--size-border, 0.125rem) * -1 );
-	margin-top: calc( var(--size-border, 0.125rem) * -1 );
+	margin-bottom: calc( var(--size-border) * -1 );
+	margin-top: calc( var(--size-border) * -1 );
 	max-width: 100%;
-	padding: calc( 0.25rem - (var(--size-border, 0.125rem) / 2) ) calc( 0.5rem - (var(--size-border, 0.125rem) / 2) );
+	padding: calc( 0.25rem - (var(--size-border) / 2) ) calc( 0.5rem - (var(--size-border) / 2) );
 }
 button:focus,
 input:focus,
@@ -268,15 +243,15 @@ i > em {
 code,
 kbd,
 samp {
-	background-color: hsl( var(--hsl-whitewash, 0, 0%, 100% ) );
-	border-radius: var(--size-radius, 0.25rem);
+	background-color: hsl( var(--hsl-whitewash) );
+	border-radius: var(--size-radius);
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;
 	color: hsl( var(--hsl-background) );
-	font-family: var(--font-code, ui-monospace, monospace);
+	font-family: var(--font-code);
 	font-size: calc( 1em * 0.9375 );
-	line-height: calc( var(--ratio-line, 1.5) / 0.9375 );
-	padding: var(--size-gap, 0.125em) calc( var(--size-gap, 0.125em) * 2 );
+	line-height: calc( var(--ratio-line) / 0.9375 );
+	padding: var(--size-gap) calc( var(--size-gap) * 2 );
 }
 
 del,
@@ -287,13 +262,13 @@ s {
 }
 
 details {
-	padding: var(--rlh, 1.5rem);
+	padding: var(--rlh);
 	position: relative; /* for summary::before */
 }
 details > summary {
 	cursor: pointer;
 	display: list-item; /* Safari */
-	font-weight: var(--weight-bold, bolder);
+	font-weight: var(--weight-bold);
 	list-style-type: none;
 	outline: none; /* inconsistent implementation */
 }
@@ -302,18 +277,18 @@ details > summary::after {
 	content: "";
 	display: inline-block;
 	float: right;
-	height: var(--lh, 1.5em);
+	height: var(--lh);
 	margin-left: 1em;
-	-webkit-mask: url("data:image/svg+xml;utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' stroke-linecap='round' stroke-linejoin='round' fill='none' stroke='black' stroke-width='1.5'><path d='M4 6l4 4 4-4'/></svg>") center / var(--lh, 1.5em) no-repeat;
-	width: var(--lh, 1.5em);
+	-webkit-mask: url("data:image/svg+xml;utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' stroke-linecap='round' stroke-linejoin='round' fill='none' stroke='black' stroke-width='1.5'><path d='M4 6l4 4 4-4'/></svg>") center / var(--lh) no-repeat;
+	width: var(--lh);
 }
 details[open] > summary::after {
 	transform: rotate(180deg);
 }
 details > summary::before {
 	bottom: 0;
-	border-radius: var(--size-radius, 0.25rem);
-	box-shadow: 0 0 0 var(--size-border, 0.125rem); /* border */
+	border-radius: var(--size-radius);
+	box-shadow: 0 0 0 var(--size-border); /* border */
 	content: ""; /* enlarge interactive area */
 	left: 0;
 	position: absolute;
@@ -336,11 +311,11 @@ details > summary::-webkit-details-marker {
 }
 
 dialog {
-	background-color: hsl( var(--hsl-whitewash, 0, 0%, 100% ) );
+	background-color: hsl( var(--hsl-whitewash) );
 	height: fit-content;
 	left: 0;
 	margin: auto;
-	padding: var(--size-padding, 7.5vw);
+	padding: var(--size-padding);
 	position: absolute;
 	right: 0;
 	width: fit-content;
@@ -352,30 +327,30 @@ dialog:not([open]) {
 dl dd {
 	display: list-item;
 	list-style-type: "—\A0\A0"; /* em dash + white space */
-	margin-left: var(--rlh, 1.5rem);
+	margin-left: var(--rlh);
 }
 dl dd::marker {
 	color: hsl( var(--hsl-accent) );
-	font-size: calc( 1em * var(--ratio-small, 0.875) );
-	font-weight: calc( var(--weight-normal, 400) / var(--ratio-small, 0.875) );
-	line-height: calc( var(--ratio-line, 1.5) / var(--ratio-small, 0.875) );
+	font-size: calc( 1em * var(--ratio-small) );
+	font-weight: calc( var(--weight-normal) / var(--ratio-small) );
+	line-height: calc( var(--ratio-line) / var(--ratio-small) );
 }
 dl dt {
-	font-weight: var(--weight-bold, bolder);
+	font-weight: var(--weight-bold);
 }
 
 fieldset {
-	border-width: var(--size-border, 0.125rem);
-	padding: var(--rlh, 1.5rem);
+	border-width: var(--size-border);
+	padding: var(--rlh);
 }
 
 figure > * {
 	width: 100%;
 }
 figure figcaption {
-	font-size: calc( 1em * var(--ratio-small, 0.875) );
-	font-weight: calc( var(--weight-normal, 400) / var(--ratio-small, 0.875) );
-	line-height: calc( var(--ratio-line, 1.5) / var(--ratio-small, 0.875) );
+	font-size: calc( 1em * var(--ratio-small) );
+	font-weight: calc( var(--weight-normal) / var(--ratio-small) );
+	line-height: calc( var(--ratio-line) / var(--ratio-small) );
 	opacity: 0.5;
 }
 
@@ -385,66 +360,66 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--font-title, inherit);
+	font-family: var(--font-title);
 	font-variant-numeric: lining-nums;
 }
 h1 {
-	font-size: var(--lh, 1.5em);
-	font-weight: var(--weight-bold, bolder);
+	font-size: var(--lh);
+	font-weight: var(--weight-bold);
 	line-height: 1;
 }
 h2 {
-	font-size: var(--lh, 1.5em);
-	font-weight: calc( var(--weight-normal, 400) / var(--ratio-line) );
+	font-size: var(--lh);
+	font-weight: calc( var(--weight-normal) / var(--ratio-line) );
 	line-height: 1;
 }
 h3 {
-	font-weight: var(--weight-bold, bolder);
+	font-weight: var(--weight-bold);
 	line-height: 1;
-	margin-top: calc( var(--lh, 1.5em) - 1em );
+	margin-top: calc( var(--lh) - 1em );
 }
 h4 {
 	line-height: 1;
-	margin-top: calc( var(--lh, 1.5em) - 1em );
+	margin-top: calc( var(--lh) - 1em );
 }
 h5 {
-	font-weight: var(--weight-bold, bolder);
+	font-weight: var(--weight-bold);
 }
 h5,
 h6 {
 	float: left; /* inline */
-	margin-right: var(--rlh, 1.5em);
+	margin-right: var(--rlh);
 	vertical-align: baseline;
 }
 
 hr {
-	height: var(--rlh, 1.5rem); /* Firefox */
-	margin: calc( var(--rlh, 1.5rem) * 1.5 ) auto;
+	height: var(--rlh); /* Firefox */
+	margin: calc( var(--rlh) * 1.5 ) auto;
 }
 hr::after {
 	color: hsl( var(--hsl-accent) );
 	content: "•\A0\A0\A0\A0•\A0\A0\A0\A0•";
 	display: block;
-	font-weight: var(--weight-bold, bolder);
+	font-weight: var(--weight-bold);
 	text-align: center;
 }
 
 html {
 	caret-color: currentcolor;
-	color: hsl( var(--hsl-text, 0, 0%, 0% ) );
+	color: hsl( var(--hsl-text) );
 	cursor: default;
-	font-family: var(--font-body, ui-sans-serif, system-ui, -apple-system, sans-serif);
-	font-size: var(--size-font, 1rem);
+	font-family: var(--font-body);
+	font-size: var(--size-font);
 	font-variant-numeric: oldstyle-nums proportional-nums;
-	font-weight: var(--weight-normal, 400);
+	font-weight: var(--weight-normal);
 	hanging-punctuation: first last;
 	height: 100%;
-	line-height: var(--ratio-line, 1.5);
+	line-height: var(--ratio-line);
 	overflow-wrap: break-word;
 	overflow-x: hidden;
 	overflow-y: scroll;
 	scroll-behavior: smooth;
-	scroll-padding: var(--size-padding, 7.5vw);
+	scroll-padding: var(--size-padding);
 	tab-size: 4;
 	-webkit-tap-highlight-color: transparent; /* iOS */
 	text-rendering: optimizeSpeed;
@@ -453,13 +428,13 @@ html {
 }
 
 main li {
-	margin-left: var(--rlh, 1.5rem);
+	margin-left: var(--rlh);
 }
 main li::marker {
 	color: hsl( var(--hsl-accent) );
-	font-size: calc( 1em * var(--ratio-small, 0.875) );
-	font-weight: calc( var(--weight-normal, 400) / var(--ratio-small, 0.875) );
-	line-height: calc( var(--ratio-line, 1.5) / var(--ratio-small, 0.875) );
+	font-size: calc( 1em * var(--ratio-small) );
+	font-weight: calc( var(--weight-normal) / var(--ratio-small) );
+	line-height: calc( var(--ratio-line) / var(--ratio-small) );
 }
 main ul > li {
 	list-style-type: "•\A0\A0\A0\A0"; /* bullet + white space */
@@ -475,14 +450,16 @@ footer li::before {
 }
 
 mark {
-	background-color: hsla( var(--hsl-highlight), 0.4 );
+	/* background-color: hsla( var(--hsl-accent), 0.4 ); */
+	background-color: hsl( var(--hsl-accent) );
 	border-radius: 0.25em 100% / 100% 0.25em;
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;
-/* 	box-shadow: inset 0 0 var(--size-gap, 0.125em) hsla( var(--hsl-highlight), 0.85 ); */
-	margin: calc( var(--size-gap, 0.125em) * -1 )  calc( var(--size-gap, 0.125em) * -2 );
+	/* box-shadow: inset 0 0 var(--size-gap) hsla( var(--hsl-accent), 0.85 ); */
+	color: hsl( var(--hsl-whitewash) );
+	margin: calc( var(--size-gap) * -0.5 )  calc( var(--size-gap) * -1 );
 	mix-blend-mode: multiply;
-	padding: var(--size-gap, 0.125em) calc( var(--size-gap, 0.125em) * 2 );
+	padding: var(--size-gap) calc( var(--size-gap) * 2 );
 }
 
 pre {
@@ -491,7 +468,7 @@ pre {
 }
 pre > code {
 	display: block;
-	padding: var(--rlh, 1.5rem);
+	padding: var(--rlh);
 	word-wrap: break-word; /* = overflow-wrap; no other way to break lines within markdown-rendered `code` */
 }
 
@@ -517,15 +494,15 @@ select[multiple] {
 }
 
 small {
-	font-size: calc( 1em * var(--ratio-small, 0.875) );
-	font-weight: calc( var(--weight-normal, 400) / var(--ratio-small, 0.875) );
-	line-height: calc( var(--ratio-line, 1.5) / var(--ratio-small, 0.875) );
+	font-size: calc( 1em * var(--ratio-small) );
+	font-weight: calc( var(--weight-normal) / var(--ratio-small) );
+	line-height: calc( var(--ratio-line) / var(--ratio-small) );
 }
 
 sub,
 sup {
 	font-style: normal;
-	font-weight: var(--weight-normal, 400);
+	font-weight: var(--weight-normal);
 	vertical-align: baseline;
 }
 sub {
@@ -569,9 +546,9 @@ table {
 }
 table > caption {
 	caption-side: bottom;
-	font-size: calc( 1em * var(--ratio-small, 0.875) );
-	font-weight: calc( var(--weight-normal, 400) / var(--ratio-small, 0.875) );
-	line-height: calc( var(--ratio-line, 1.5) / var(--ratio-small, 0.875) );
+	font-size: calc( 1em * var(--ratio-small) );
+	font-weight: calc( var(--weight-normal) / var(--ratio-small) );
+	line-height: calc( var(--ratio-line) / var(--ratio-small) );
 	opacity: 0.5;
 }
 /*
@@ -582,33 +559,33 @@ table thead {
 */
 table td,
 table th {
-	/* background-color: hsla( var(--hsl-text, 0, 0%, 0%), 0.05 ); */
-	/* box-shadow: 0 0 0 var(--size-border, 0.125rem) hsl( var(--hsl-background) ); */ /* simulate borders */
-	font-size: calc( 1em * var(--ratio-small, 0.875) );
+	/* background-color: hsla( var(--hsl-text), 0.05 ); */
+	/* box-shadow: 0 0 0 var(--size-border) hsl( var(--hsl-background) ); */ /* simulate borders */
+	font-size: calc( 1em * var(--ratio-small) );
 	font-variant-numeric: lining-nums tabular-nums;
-	font-weight: calc( var(--weight-normal, 400) / var(--ratio-small, 0.875) );
-	line-height: calc( 1 / var(--ratio-small, 0.875) );
-	padding: 0 calc( var(--rlh, 1.5rem) - 1rem ) calc( var(--rlh, 1.5rem) - 1rem ) 0;
+	font-weight: calc( var(--weight-normal) / var(--ratio-small) );
+	line-height: calc( 1 / var(--ratio-small) );
+	padding: 0 calc( var(--rlh) - 1rem ) calc( var(--rlh) - 1rem ) 0;
 	scroll-snap-align: start;
 }
 table td {
 	vertical-align: top;
 }
 table th {
-	font-weight: var(--weight-bold, bolder);
+	font-weight: var(--weight-bold);
 	vertical-align: bottom;
 }
 table > thead th:first-child {
-	border-top-left-radius: var(--size-radius, 0.25rem);
+	border-top-left-radius: var(--size-radius);
 }
 table > thead th:last-child {
-	border-top-right-radius: var(--size-radius, 0.25rem);
+	border-top-right-radius: var(--size-radius);
 }
 table tr:last-child td:first-child {
-	border-bottom-left-radius: var(--size-radius, 0.25rem); /* assumes no tfoot and no td in thead */
+	border-bottom-left-radius: var(--size-radius); /* assumes no tfoot and no td in thead */
 }
 table tr:last-child td:last-child {
-	border-bottom-right-radius: var(--size-radius, 0.25rem); /* assumes no tfoot and no td in thead */
+	border-bottom-right-radius: var(--size-radius); /* assumes no tfoot and no td in thead */
 }
 
 textarea {
@@ -622,11 +599,11 @@ time {
 
 [align="right" i] {
 	float: right;
-	margin: var(--rlh, 1.5rem) 0 var(--rlh, 1.5rem) var(--rlh, 1.5rem);
+	margin: var(--rlh) 0 var(--rlh) var(--rlh);
 }
 [align="left" i] {
 	float: left;
-	margin: var(--rlh, 1.5rem) var(--rlh, 1.5rem) var(--rlh, 1.5rem) 0;
+	margin: var(--rlh) var(--rlh) var(--rlh) 0;
 }
 
 [aria-busy="true" i] {
@@ -660,7 +637,7 @@ time {
 }
 
 ::selection {
-	background-color: hsl( var(--hue-1, 211), 100%, 90% ); /* fallback matches browser default hue in #b3d4fc */
+	background-color: hsl( var(--hue-1), 100%, 90% ); /* fallback matches browser default hue in #b3d4fc */
 	text-shadow: none;
 }
 
@@ -769,7 +746,7 @@ time {
 }
 [data-theme] #header [role="doc-subtitle"] {
 	opacity: 0.6;
-	margin-top: calc( var(--lh, 1.5em) - 1em );
+	margin-top: calc( var(--lh) - 1em );
 }
 
 [data-theme] #nav ul {
@@ -797,7 +774,6 @@ time {
 	line-height: calc( 1 / var(--ratio-small) );
 	letter-spacing: 0.125em;
 	text-transform: uppercase;
-/* 	font-feature-settings: "smcp", "c2sc"; */
 }
 
 [data-theme] #presentation {
@@ -880,12 +856,12 @@ time {
 }
 [data-theme] #contact h2 {
 	color: hsl( var(--hsl-accent) );
+	filter: invert(100%) hue-rotate(180deg);
 	flex: 0 0 100%;
 	font-size: inherit;
 	font-weight: var(--weight-bold);
 	letter-spacing: 0.125em;
 	text-transform: uppercase;
-/* 	font-feature-settings: "smcp", "c2sc"; */
 }
 [data-theme] #contact ul {
 	display: flex;
@@ -910,8 +886,8 @@ time {
 	box-sizing: content-box;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: var(--size-line, 40em);
-	padding: calc( var(--size-padding, 7.5vw) );
+	max-width: var(--size-line);
+	padding: calc( var(--size-padding) );
 }
 [data-theme] article + article {
 	margin-top: var(--size-padding);
@@ -922,7 +898,6 @@ time {
 	font-weight: var(--weight-bold);
 	letter-spacing: 0.125em;
 	text-transform: uppercase;
-/* 	font-feature-settings: "smcp", "c2sc"; */
 }
 
 [data-theme] #hello p:first-of-type {
@@ -956,7 +931,6 @@ time {
 [data-theme] #hello dt {
 	letter-spacing: 0.125em;
 	text-transform: uppercase;
-/* 	font-feature-settings: "smcp", "c2sc"; */
 }
 [data-theme] #hello dd,
 [data-theme] #work dd {
@@ -978,7 +952,7 @@ time {
 	box-shadow:
 		0 0.0625rem 0.125rem hsla( var(--hsl-shadow), 0.2 ),
 		inset 0 -0.0625rem 0 hsla( var(--hsl-shadow), 0.3 ),
-		inset 0 0.0625rem 0 hsl( var(--hsl-whitewash, 0, 0%, 100% ) );
+		inset 0 0.0625rem 0 hsl( var(--hsl-whitewash) );
 	margin: 0;
 }
 [data-theme] pre > code + button {
@@ -1001,7 +975,7 @@ time {
 	box-shadow:
 		inset 0 0.0625rem 0.125rem hsla( var(--hsl-shadow), 0.2 ),
 		0 -0.0625rem 0 hsla( var(--hsl-shadow), 0.3 ),
-		0 0.0625rem 0 hsl( var(--hsl-whitewash, 0, 0%, 100% ) );
+		0 0.0625rem 0 hsl( var(--hsl-whitewash) );
 	transform: translateY(0.0625rem);
 }
 [data-theme] pre > code + button::before {

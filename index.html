@@ -35,13 +35,14 @@ Ad fontes!
 
 		<hgroup>
 			<h1><a href="/" rel="home">Chad Helmer</a></h1>
-			<p role="doc-subtitle">Experienced Web&nbsp;Developer</p>
+			<p role="doc-subtitle">Design&nbsp;Engineer</p>
 		</hgroup>
 
 		<nav id="nav">
 			<ul>
 				<li><a href="#hello">Hello</a></li>
 				<li><a href="#work">Work</a></li>
+				<li><a href="#about">About</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
@@ -49,6 +50,7 @@ Ad fontes!
 		<!-- Separate SVG layers for performance during parallax animation (they each get their own GPU layer) (SVGs don't support z-axis anyway) -->
 		<div id="presentation" role="presentation">
 			<svg id="sky"       viewBox="0 0 960 540" width="0" height="0" preserveAspectRatio="xMinYMax slice"><use href="#path-sky"       fill="url(#gradient)" /></svg>
+			<svg id="mountain"  viewBox="0 0 960 540" width="0" height="0" preserveAspectRatio="xMinYMax slice"><use href="#path-mountain"  fill="url(#gradient)" /></svg>
 			<svg id="hill-far"  viewBox="0 0 960 540" width="0" height="0" preserveAspectRatio="xMinYMax slice"><use href="#path-hill-far"  fill="url(#gradient)" /></svg>
 			<svg id="hill-mid"  viewBox="0 0 960 540" width="0" height="0" preserveAspectRatio="xMinYMax slice"><use href="#path-hill-mid"  fill="url(#gradient)" /></svg>
 			<svg id="hill-near" viewBox="0 0 960 540" width="0" height="0" preserveAspectRatio="xMinYMax slice"><use href="#path-hill-near" fill="url(#gradient)" /></svg>
@@ -62,8 +64,8 @@ Ad fontes!
 
 		<article id="hello">
 			<h2>Hello.</h2>
-			<p><strong>My name is Chad.</strong> I am a designer and programmer in Richmond, VA.</p>
-			<p>I make good websites. I have been working with Christian non-profits and businesses in the digital space for over 20 years, using best practices even before they were buzzwords:</p>
+			<p><strong>My name is Chad.</strong> I make <em>good</em> websites.</p>
+			<p>I’ve been working with Christian non-profits and businesses in the digital space for over 20 years, using best practices even before they were buzzwords. These features are a given with my work:</p>
 			<dl>
 				<div>
 					<dt><mark>User-Centered</mark></dt>
@@ -148,14 +150,15 @@ Ad fontes!
 					<dd>Audience growth for non-profit with content-driven website and marketing materials</dd>
 				</div>
 			</dl>
+			<hr>
+			<p><strong>Note:</strong> I wrote every line of this small site’s code for the fun of it. I remember when the web was young. (Go on, right click and explore the page source.)</p>
+		</article>
+
+		<article id="about">
+			<h2>About.</h2>
 			<p>I studied design at <a href="https://www.buffalo.edu/" target="_blank">University of Buffalo</a>, theology at <a href="https://www.sbts.edu/" target="_blank">The Southern Baptist Theological Seminary</a> and linguistics at <a href="https://diu.edu/" target="_blank">Dallas International University</a>. I have a UX certification from <a href="https://www.nngroup.com/" target="_blank">Nielsen Norman Group</a>.</p>
-			<hr>
-			<p>I was ordained to Christian ministry in 2009 and worked for years among the many peoples of the Himalayas. I loved that place and expressed a bit of that in the mountain backdrop on this site. Web work came with me — like Paul the missionary’s tent-making — traveling easily and often paying the way. I learned the benefits of lightweight websites on slow, spotty networks. I saw how web technology extends our reach in ministry. I grew in cross-cultural understanding as I worked alongside leaders in churches, schools, and offices.</p>
-			<p>Many generous people have helped me on my way, professionally and personally. It has become a special joy to help others along. Freely received, freely given.</p>
-			<p>My greatest work is personal. I love my wife and five children. I have come to love Jesus Christ and all that is his: the Church, the Bible, the nations. I would love to chat about any of these things.</p>
-			<p>Contact <a href="mailto:me@chadhelmer.com">me@chadhelmer.com</a>.</p>
-			<hr>
-			<p>I built this small site line by line. I enjoy my craft and work with heart. I remember when the web was young and fun. (Go on, right click and view page source.)</p>
+			<p>I was ordained to Christian ministry in 2009 and worked for years among the many peoples of the Himalayas. Web work came with me — like Paul the missionary’s tent-making — traveling easily and sometimes paying the way. I learned the benefits of lightweight websites on slow networks. I saw how web technology extends our reach in ministry. I worked alongside churches, schools, and businesses and grew in cross-cultural understanding. I loved that dizzying, vibrant, hospitable place. I put a bit of the view in the backdrop design of this page.</p>
+			<p>I enjoy my craft and work with heart. But what matters most <em>to</em> me has come least naturally <em>from</em> me. Love has not come naturally, but it <em>has</em> come and changed me. I love Jesus Christ and all that he has shared with me: his boundless grace in the gospel, his family, his word, his Spirit, his kingdom. I love my wife and five children. And I’m thankful for the many people who have freely helped me on my way, professionally and personally. It has become a special joy to help others along. I would <a href="#contact">love to chat</a> about any of these things.</p>
 		</article>
 
 	</main>
@@ -163,7 +166,7 @@ Ad fontes!
 	<footer id="footer">
 
 		<section id="contact">
-			<h2>Contact</h2>
+			<h2>Contact.</h2>
 			<address>
 				<ul>
 					<li>Email&nbsp;&nbsp;<a href="mailto:me@chadhelmer.com" rel="me">me@chadhelmer.com</a></li>
@@ -187,6 +190,7 @@ Ad fontes!
 			</linearGradient>
 			<!-- Graphics -->
 			<path id="path-sky"       shape-rendering="optimizeSpeed" d="M0 0h960v540H0V0" />
+			<path id="path-mountain"  shape-rendering="optimizeSpeed" d="m0 237 9-2c8-1 20-8 25-8s6 2 8 0 16-14 20-14 10 0 12-2 7-10 9-11 1-2 5-3 6 5 10 6l29 6 12 1c3-1 8-4 11-4s16 1 22 4 11 8 15 6c9-2 12 1 20 1s20-15 25-16c15-5 25-14 27-14s6-5 10-5 14 6 24 6c6 1 30-5 32-5 5 1 13 14 18 13 10-1 15 3 24 1 10-3 17-11 21-11s11 0 18-1 23-17 28-17 23 4 28 4 10-10 14-9c10 4 17 1 19 0 6-3 34 16 46 24 6 5 22 0 27 0 9-1 30 13 41 17 14 4 30 6 41 5 5-1 8 15 12 15 6-1 9-15 21-23 6-3 13-14 21-14 10 0 26 18 33 20 4 1 14-3 18-3 7 0 17 15 20 14s5-8 8-8 7 1 9 0 3-8 8-7c5 0 6 0 14 4s15 13 20 13h15c2 0 6 4 10 3l7-3c5 0 5 7 10 6s13-8 17-6 15 10 26 9 28-12 32-12h9v323H0V237Z" />
 			<path id="path-hill-far"  shape-rendering="optimizeSpeed" d="M960 540H0V336c11 8 52 5 102 2 45 2 91-1 149-15 15-3 29-3 45-2 11 2 17-1 28-5 5-3 19-4 27-7 7-1 12 4 19 6 2 1 12-3 18-6 16-10 37-7 56-6l29 5c10 1 19-2 29-1 11 0 24-1 33-5 6-3 29-1 33-6 4-6 7-6 13-10 5-4 25-1 31-4 17-12 32-10 54-3 18 5 35 3 52 6 20 4 36 15 56 18 8 2 16 0 25 3 8 2 15 0 24 0 10 3 21 2 29 7l12 6c4 1 7-2 11 1 12 7 35 2 49 3l36 3v214Z" />
 			<path id="path-hill-mid"  shape-rendering="optimizeSpeed" d="M0 540V291l12 2c7 4 15 6 24 8 7 3 13 4 22 4 9-1 19-6 26-5l48 9 20-2c12 1 32 6 45 5 7 0 14-5 22-5 9-1 22 0 32 1l26 4c9 1 15 6 23 9 16 6 24 15 44 11 4-1 11-5 17-3 7 1 10 6 17 7 10 2 15 3 25 3 13 1 17-2 29-5 5-2 10 2 15 2 5 1 10 0 14-1l31-4c11-4 27-6 41-6 6 0 7 1 22 8 8 4 8 6 19 6h15c6-1 9 3 16 4 12 3 21 9 32 13 12 5 25 6 37 8 25 5 51-7 75-4 7 1 16 7 21 10 6 3 13 3 19 4l22 6c13 4 24 3 38 5 13 2 27-1 41 2 4 0 10 3 14 1l17-4c12-3 27-3 39-4v160H0Z" />
 			<path id="path-hill-near" shape-rendering="optimizeSpeed" d="M960 540v-60c-22 0-42-4-61-11l-23-8-24-7-14-4-13-4c-8-3-16-3-24-2-21 2-38-5-57-6-11 0-19-5-29-7-9-2-20 1-30 0-19-1-38-3-57-2-3 0-2-3-7-3l-13-3-14-4c-5 0-8 0-12-2-7-2-21-2-29-4-13-1-23-4-37-4-9-1-27-1-36-4-5-2-12 1-16-1h-10l-12-2c-5-2-9-2-16-2l-16-2c-17-3-36-3-53-3-7 0-7 3-15 2l-15-1c-9-1-13 2-20 2h-9c-3 1-2-1-5-1-2 0-12-2-13-1-1 3-7 1-13 2-5 2-12 1-17 1s-7 3-11 3l-12 1c-9 1-13-4-23-2l-14 2c-5 0-7-3-10-4-5-1-10 3-13-1-3-3-12-1-18-2l-24-1h-15l-16-1c-1-3-10-4-12-4-5-1-6 2-10 2-3-3-5-9-7-9-4-1-7 1-10-1-3-1-4-3-7-2l-16 1c-3 3-11 3-16 3l-16-1v157h960Z" />

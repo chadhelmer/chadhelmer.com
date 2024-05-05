@@ -778,7 +778,7 @@ time {
 [data-theme] #presentation {
 	bottom: 0;
 	box-shadow:
-		0 -100vh     0 100vh hsl(var(--hsl-background)),
+		0 -100vh     0 100vh var(--stop-color-0),
 		0      0   5vh   5vh var(--stop-color-100),
 		0      0  50vh  50vh var(--stop-color-100),
 		0      0     0 100vh #000; /* continue gradient beyond footer without taking up space; but watch performance */

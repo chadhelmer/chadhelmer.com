@@ -45,7 +45,7 @@ TOC:	1. Declarations
 	--hue-1:                                203; /* Base color; angle of 0-360 color circle */
 	--hue-2:                                 43; /* Secondary color */
 	--hsl-text:        var(--hue-1), 100%,  15%; /* Text/borders */
-	--hsl-shadow:      var(--hue-1),  95%,  15%; /* Shadows */
+	--hsl-shadow:      var(--hue-1), 100%,   5%; /* Shadows */
 	--hsl-link:        var(--hue-1), 100%,  33%; /* Links */
 	--hsl-accent:      var(--hue-2),  78%,  30%; /* Accents */
 	--hsl-background:  var(--hue-2),  10%,  95%; /* Backgrounds */
@@ -781,7 +781,7 @@ time {
 		0 -100vh     0 100vh var(--stop-color-0),
 		0      0   5vh   5vh var(--stop-color-100),
 		0      0  50vh  50vh var(--stop-color-100),
-		0      0     0 100vh #000; /* continue gradient beyond footer without taking up space; but watch performance */
+		0      0     0 100vh hsl(var(--hsl-shadow)); /* continue gradient beyond footer without taking up space; but watch performance */
 	height: 100vmin;
 	left: 0;
 	pointer-events: none;
